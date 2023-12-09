@@ -38,7 +38,7 @@ window.onload = async () => {
   } else if (query === "?logout") {
     localStorage.removeItem("auth:login");
     console.log("logging out...")
-    await client.logout();
+    //await client.logout();
     return;
 
   } else {
