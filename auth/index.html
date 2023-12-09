@@ -5,7 +5,7 @@
 </head>
 <body>
 <script>
-const authSettings = {domain: "progrium-dev.us.auth0.com", clientId: "EVXd6Gjc1Uy1sPXlHat78eKdRNICO0Xq"};
+const authSettings = {domain: "progrium-dev.us.auth0.com", clientId: "thNBxeBSVR9ZsWWNdIBBaxkWPOPyOEQH"};
 function finish() {
   const redirect = localStorage.getItem("auth:redirect");
   if (redirect) {
@@ -31,7 +31,7 @@ window.onload = async () => {
     scope: "read:current_user read:user_idp_tokens update:current_user_metadata",
     prompt: "login",
   };
-  const client = await auth0spa.createAuth0Client({authorizationParams, authSettings...});    
+  const client = await auth0spa.createAuth0Client({authorizationParams, authSettings...});  
   if (query.includes("code=") && query.includes("state=")) {
     await client.handleRedirectCallback();
     window.history.replaceState({}, document.title, "/auth/");
